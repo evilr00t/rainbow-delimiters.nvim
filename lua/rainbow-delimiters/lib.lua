@@ -171,6 +171,7 @@ function M.attach(bufnr)
 		local success
 		success, parser = pcall(get_parser, bufnr, lang)
 		if not success then return end
+		if not parser then return end
 	end
 
 	local strategy
