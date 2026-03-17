@@ -197,8 +197,8 @@ local function setup_parser(bufnr, parser, start_parent_lang)
 			---@param tree TSTree
 			on_changedtree = function(changes, tree)
 				log.trace('Changed tree in buffer %d with languages %s', bufnr, lang)
-				-- HACK: As of Neovim v0.9.1 there is no way of unregistering a
-				-- callback, so we use this check to abort
+				-- HACK: There is no way of unregistering a callback, so we use
+				-- this check to abort
 				if not lib.buffers[bufnr] then return end
 
 				-- HACK: changes can accidentally overwrite highlighting in injected code

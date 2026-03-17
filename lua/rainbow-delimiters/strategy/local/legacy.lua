@@ -258,8 +258,8 @@ local function setup_parser(bufnr, parser)
 			---@param _changes table
 			---@param tree TSTree
 			on_changedtree = function(_changes, tree)
-				-- HACK: As of Neovim v0.9.1 there is no way of unregistering a
-				-- callback, so we use this check to abort
+				-- HACK: There is no way of unregistering a callback, so we use
+				-- this check to abort
 				if not lib.buffers[bufnr] then return end
 
 				if vim.fn.pumvisible() ~= 0 then return end
