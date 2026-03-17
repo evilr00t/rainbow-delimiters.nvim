@@ -16,7 +16,7 @@
    limitations under the License.
 --]]
 
-local priorities = (vim.hl or vim.highlight).priorities
+local priorities = vim.hl.priorities
 
 ---Default plugin configuration.
 ---@type rainbow_delimiters.config
